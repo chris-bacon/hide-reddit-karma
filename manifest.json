@@ -1,0 +1,19 @@
+{
+
+  "manifest_version": 2,
+  "name": "Hide Reddit Karma",
+  "version": "0.1.0",
+
+  "description": "Hide reddit karma",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "js": ["hide.js"]
+    }
+  ]
+}
