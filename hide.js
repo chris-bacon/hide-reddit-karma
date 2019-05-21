@@ -25,13 +25,21 @@ const commentPoints = {
   f: deleteHtml
 }
 
+// ---------------------------------------
+
 const targets = [upvoteButtons, ariaLabelUpvoteButtons, commentPoints]
+
+// ---------------------------------------
 
 function deleteHtml(target) {
   if (target && target.parentNode) target.parentNode.removeChild(target)
 }
 
+// ---------------------------------------
+
 const run = ts => ts.forEach(target => target.data.forEach(d => target.f(d)))
+
+// ---------------------------------------
 
 run(targets)
 
