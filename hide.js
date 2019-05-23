@@ -2,11 +2,11 @@ const upvoteButtons = {
   data: document.querySelectorAll("button[id^=upvote-button]"),
   f: upvoteButton => {
     var karmaScore = upvoteButton.nextSibling
-    if (karmaScore) var downvoteButton = upvoteButton.nextSibling.nextSibling
-
-    deleteHtml(upvoteButton)
-    deleteHtml(karmaScore)
-    deleteHtml(downvoteButton)
+    
+    if (karmaScore) {
+      deleteHtml(upvoteButton)
+      deleteHtml(karmaScore)
+      deleteHtml(downvoteButton)
   }
 }
 
@@ -37,7 +37,7 @@ function deleteHtml(target) {
 
 // ---------------------------------------
 
-const run = ts => ts.forEach(target => target.data.forEach(d => target.f(d)))
+const run = ts => ts.forEach(target => target.data.forEach(d => target.f))
 
 // ---------------------------------------
 
