@@ -29,7 +29,9 @@ const targets = [upvoteButtons, ariaLabelUpvoteButtons, commentPoints];
 // ---------------------------------------
 
 function deleteHtmlNodes(targets) {
-  targets.forEach(target => if(target.parentNode) target.parentNode.removeChild(target));
+  targets
+    .filter(target => target.parentNode)
+    .forEach(target => target.parentNode.removeChild(target));
 }
 
 // ---------------------------------------
