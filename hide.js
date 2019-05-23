@@ -6,6 +6,7 @@ const upvoteButtons = {
     if (karmaScore) {
       var downvoteButton = upvoteButton.nextSibling.nextSibling
       deleteHtmlNodes([upvoteButton, karmaScore, downvoteButton]);
+    }
   }
 }
 
@@ -36,7 +37,7 @@ function deleteHtmlNodes(targets) {
 
 // ---------------------------------------
 
-const run = ts => ts.forEach(target => target.data.forEach(d => target.f))
+const run = ts => ts.forEach(target => target.data.forEach(target.f))
 
 // ---------------------------------------
 
